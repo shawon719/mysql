@@ -1,9 +1,21 @@
 <?php
-    $db= mysqli_connect('localhost','root','','student_info');
-    if(!$db){
-        echo "connection failed";
+    //$db= mysqli_connect('localhost','root','','sent_info');
+    // if(!$db){
+    //     echo "connection failed";
+    // }else{
+    //     echo "connect successfully";
+    // }
+try{
+     $db= mysqli_connect('localhost','root','','student_info');
+         if(!$db){
+        throw new Exception("connection failed.");
     }else{
-        echo "connect successfully";
+        echo "connect successfully.";
+    }
+}
+catch(Exception $e){
+        //handle the exception.
+        echo "connection failed:" . $e->getMessage();
     }
 ?>
 
