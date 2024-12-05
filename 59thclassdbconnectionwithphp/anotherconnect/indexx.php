@@ -1,3 +1,6 @@
+<?php
+        include("connectdbwphp.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,19 +9,20 @@
     <title>db connection</title>
 </head>
 <body>
-        <table>
+            <h1>database connection procedural way.Without try and catch function.</h1>
+        <table border="2" style="border-collapse:collapse;">
             <tr>
-                <th>NAME</th>
                 <th>id</th>
+                <th>NAME</th>
                 <th>EMAIL</th>
             </tr>
 
             <?php
-                $db=$connect->query("select * from ");
-                while(list($_name,$_id,$_email)=$db->fetch_row()){
+                $db=$connect->query("select * from trainee_details");
+                while(list($_id,$_name,$_email)=$db->fetch_row()){
                     echo "<tr>
-                        <td>$_name</td>
                         <td>$_id</td>
+                        <td>$_name</td>
                         <td>$_email</td>
                     </tr>";
                 }
