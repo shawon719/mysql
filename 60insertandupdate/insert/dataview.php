@@ -138,6 +138,9 @@
                     <td class='action-links'>
                         <a href='dataview.php?deleteid=$id'>Delete</a>
                     </td>
+                    <td class='action-links'>
+                        <a href='edit.php?id=$id'>EDIT</a>
+                    </td>
                 </tr>";
         }
         echo "</table>";
