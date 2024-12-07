@@ -28,8 +28,11 @@
 
         h1 {
             text-align: center;
-            color: #4CAF50;
+            color: #962642;
             padding: 20px 0;
+        }
+        h1:hover{
+            color: #333;
         }
 
         p {
@@ -40,19 +43,20 @@
         a {
             text-decoration: none;
             color: #fff;
-            background-color: #4CAF50;
+            background-color: #962642;
             padding: 10px 20px;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
 
         a:hover {
-            background-color: #45a049;
+            background-color: #85afd4;
+            color:black;
         }
 
         /* Table Styling */
         table {
-            width: 80%;
+            width: 50%;
             margin: 20px auto;
             border-collapse: collapse;
             background-color: #fff;
@@ -61,21 +65,28 @@
 
         th, td {
             padding: 12px;
-            text-align: left;
+            text-align: center;
             border-bottom: 1px solid #ddd;
         }
 
         th {
-            background-color: #4CAF50;
+            background-color: #5899d1;
+            color: white;
+        }
+        th:hover{
+            background-color: #055737;
             color: white;
         }
 
         td {
-            color: #555;
+            color: black;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
         }
+        
 
         tr:hover {
-            background-color: #f1f1f1;
+            background-color: #ccebdf;
         }
 
         .action-links {
@@ -84,16 +95,17 @@
         }
 
         .action-links a {
-            background-color: #ff4e42;
+            background-color: #82589F;
             padding: 5px 10px;
-            border-radius: 5px;
-            color: white;
+            border-radius: 3px;
+            color: black;
+            font-weight: 600;
             font-size: 14px;
             transition: background-color 0.3s ease;
         }
 
         .action-links a:hover {
-            background-color: #ff2a1e;
+            background-color: #EAB543;
         }
     </style>
 </head>
