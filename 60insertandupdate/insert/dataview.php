@@ -59,7 +59,7 @@
             width: 50%;
             margin: 20px auto;
             border-collapse: collapse;
-            background-color: #fff;
+            background-color: #CAD3C8;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -74,7 +74,7 @@
             color: white;
         }
         th:hover{
-            background-color: #055737;
+            background-color: #c7ecee;
             color: white;
         }
 
