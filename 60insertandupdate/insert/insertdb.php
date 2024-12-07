@@ -1,13 +1,14 @@
 <?php
         include("dbconnect.php");
         if(isset($_POST['btn'])){
+            $id=$_POST['idd'];
             $name=$_POST['na'];
-            $email=$_POST['em'];
+            $add=$_POST['em'];
 
-            $sql="INSERT INTO tablename(name,email) VALUES ('$name','$email')";
+            $sql="INSERT INTO client_det(id,name,address) VALUES ('$id','$name','$add')";
             if(mysqli_query($conn,$sql)==TRUE){
                 echo "Data inserted.";
-                header("location:view.php");
+                header("location:dataview.php");
             }
             else{
                 echo "not inserted.";
@@ -25,16 +26,20 @@
 <body>
 
         <section>
-                <form action="#">
+                <form action="#" method="post">
+                    <div>
+                        ID: <br>
+                        <input type="text" name="idd" id="">
+                    </div>
                     <div>
                         Name: <br>
                         <input type="text" name="na">
                     </div> <br>
                     <div>
-                        Email:
+                        address:
                         <input type="text" name="em" id="">
                     </div>
-                    <div>
+<div>
                         <button name="btn">submit</button>
                     </div>        
                 </form>
