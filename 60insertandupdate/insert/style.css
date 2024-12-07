@@ -1,0 +1,75 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(109, 132, 167);
+  padding-top: 20px;
+}
+
+section {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #0e0000;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  border-color: #26772a;
+  outline: none;
+}
+input:hover {
+  background-color: rgb(173, 211, 209);
+  color: white;
+  /* border: #0dd813; */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #8d042d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+  background-color: #706d65;
+}
+
+.message {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
