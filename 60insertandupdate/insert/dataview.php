@@ -126,8 +126,10 @@
                     <th>Address</th>
                     <th>Action</th>
                 </tr>";
-        
+        //$counter=1;
         while($data = mysqli_fetch_assoc($query)){
+        //while(list($sl,$id,$name,$address)=$sql){
+            //$sl= $counter++;
             $id = $data['id'];
             $name = $data['name'];
             $add = $data['address'];
