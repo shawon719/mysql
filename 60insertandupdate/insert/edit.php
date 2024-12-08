@@ -1,8 +1,9 @@
 <?php
         include("dbconnect.php");
-        if(isset($_GET['id'])){
+        //include("insertdb.php");
+        if($_GET['id']){
                 $getid=$_GET['id'];
-                $sql="SELECT FROM client_det WHERE id=$getid";
+                $sql="SELECT * FROM client_det WHERE id=$getid";
                 $query=mysqli_query($conn,$sql);
                 $data=mysqli_fetch_assoc($query);
                 $id=$data['id'];
@@ -33,7 +34,7 @@
 </head>
 <body>
 
-    <form action="#" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
         <div>
             Name: <br>
            <input type ="text" name ="na" value="<?php echo $name ?>"><br><br>
