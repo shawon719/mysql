@@ -11,12 +11,12 @@
     }//end of inserting formula
 
     //this code will show 
-    if(isset($_POST['addproduct'])){
-        $pname=$_POST['pnam'];
-        $pprice=$_POST['pp'];
-        $mid=$_POST['prod'];
-        $dbcon->query("call product_t('$pname','$pprice','$mid')");
-    }
+    // if(isset($_POST['addproduct'])){
+    //     $pname=$_POST['pnam'];
+    //     $pprice=$_POST['pp'];
+    //     $mid=$_POST['product'];
+    //     $dbcon->query("call product_t('$pname','$pprice','$mid')");
+    // }
 
 ?>
 <!DOCTYPE html>
@@ -64,9 +64,9 @@
                         <td>
                             <select name="product" id="prod">
                                 <?php
-                                        $manufac= $dbcon->query("select * from brand");
-                                        while(list($_mid,$_name)=$manufac->fetch_row()){
-                                            echo "<option value=$_mid>$_name</option>";
+                                        $product= $dbcon->query("select * from brand");
+                                        while(list($_mid,$_name)=$product->fetch_row()){
+                                            echo "<option value='$_mid'>$_name</option>";
                                         }
                                 ?>
                             </select>
