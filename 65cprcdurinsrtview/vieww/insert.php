@@ -30,7 +30,7 @@
 <body>
         <section>
             <h3>this is brand table</h3>
-            <form action="#" method="post">
+            <form action="" method="post">
                 <table>
                     <tr>
                         <td><label for="nam">Name:</label></td>
@@ -50,7 +50,7 @@
 
         <section>
             <h3>this is product table</h3>
-            <form action="#" method="post">
+            <form action="" method="post">
                 <table>
                     <tr>
                         <td><label for="pname">Name:</label></td>
