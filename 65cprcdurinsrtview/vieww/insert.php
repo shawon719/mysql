@@ -14,8 +14,9 @@
     if(isset($_POST['addproduct'])){
         $pname=$_POST['pnam'];
         $pprice=$_POST['pp'];
+        $b_id=$_POST['brid'];
         $mid=$_POST['product'];
-        $dbcon->query("call pro('$pname','$pprice','$mid')");
+        $dbcon->query("call pro('$pname','$pprice','$b_id','$mid')");
     }
 
 ?>
@@ -59,8 +60,9 @@
                         <td><label for="pprice">Price:</label></td>
                         <td><input type="text" name="pp" id="pprice"></td>
                     </tr>
+                    
                     <tr>
-                        <td><label for="prod">Product Name</label></td>
+                        <td><label for="prod">brand Name</label></td>
                         <td>
                             <select name="product" id="prod">
                                 <?php
@@ -71,6 +73,10 @@
                                 ?>
                             </select>
                         </td>
+                    </tr>
+                    <tr>
+                        <td><label for="bid">Brand id</label></td>
+                        <td><input type="text" name="brid" id=""></td>
                     </tr>
                     <tr>
                         <td></td>
