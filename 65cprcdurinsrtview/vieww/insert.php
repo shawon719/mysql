@@ -10,13 +10,13 @@
 
     }//end of inserting formula
 
-    //this code will show 
+    //this code will show for product
     if(isset($_POST['addproduct'])){
         $pname=$_POST['pnam'];
         $pprice=$_POST['pp'];
-        $b_id=$_POST['brid'];
+        
         $mid=$_POST['product'];
-        $dbcon->query("call pro('$pname','$pprice','$b_id','$mid')");
+        $dbcon->query("call pro('$pname','$pprice','$mid')");
     }
 
 ?>
@@ -75,8 +75,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="bid">Brand id</label></td>
-                        <td><input type="text" name="brid" id=""></td>
+                        <!-- <td><label for="bid">Brand id</label></td>
+                        <td><input type="text" name="brid" id=""></td> -->
                     </tr>
                     <tr>
                         <td></td>
@@ -84,6 +84,32 @@
                     </tr>
                 </table>
             </form>
+        </section>
+
+        <section>
+            <h3>view table</h3>
+            <table border="1">
+                <tr>
+                    <td>ID</td>
+                    <td>P_NAME</td>
+                    <td>Price</td>
+                    <td>brand name</td>
+                    <td>contact</td>
+                </tr>
+                <?php
+                        $product=$dbcon->query("select * from products_details");
+                        while(list($_id,$_name,$_price,$_bname,$_cont)=$product->fetch_row()){
+                        echo "<tr>
+                                        <td>$_id</td>
+                                        <td>$_name</td>
+                                        <td>$_price</td>
+                                        <td>$_bname</td>
+                                        <td>$_cont</td>
+                            </tr>";
+       
+                        }
+                ?>
+            </table>
         </section>
 </body>
 </html>
