@@ -54,22 +54,30 @@
 
         <section>
             <h3>this is view table</h3>
-            <>
-                <tr>
-                    <td>ID</td>
-                    <th>Product Name</th>
-                    <th>Price</th>
-                    <th>Brand Name</th>
-                    <th>Contact</th>
-                </tr>
-                <?php
-                        $product=$db->query("select * from product_details");
-                        $count=1;
-                        while($row=$product->fetch_row()){
-                            list($_id,$_pname,$_pprice,$_bname,$_contact)=$row
-                        }
-                ?>
-            </table>
+                <table>
+            <tr>
+                <th>ID</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Brand Name</th>
+                <th>Contact</th>
+            </tr>
+            <?php
+                $product = $db->query("SELECT * FROM product_details");
+                $count = 1;
+                while ($row = $product->fetch_row()) {
+                    list($_id, $_name, $_price, $_bname, $_cont) = $row;
+                    echo "<tr>
+                            <td>$count</td>
+                            <td>$_name</td>
+                            <td>$_price</td>
+                            <td>$_bname</td>
+                            <td>$_cont</td>
+                          </tr>";
+                    $count++;
+                }
+            ?>
+        </table>
         </section>
 </body>
 </html>
