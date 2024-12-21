@@ -69,7 +69,7 @@
         </form>
     </section>
 
-    <section>
+    <!-- <section>
         <h2>this this view product details table</h2>
         <table border="1">
             <tr>
@@ -99,8 +99,11 @@
 
 
         </table>
-    </section>
+    </section> -->
     
+    <?php
+            include("view.php");
+    ?>
 
 
 </body>
