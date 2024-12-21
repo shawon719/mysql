@@ -12,6 +12,8 @@
         if(isset($_POST["addPro"])){
             $productName=$_POST["pro"];
             $price=$_POST["pric"];
+            $manuName=$_POST["manufact"];
+            $db->query("call add_prod('$productName','$price','$manuName')");
             
         }
 ?>
