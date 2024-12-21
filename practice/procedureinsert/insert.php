@@ -56,7 +56,7 @@
             <button name="addPro">Add product</button>
         </form>
         <!-- after trigger -->
-        <form action="" method="post">
+        <!-- <form action="" method="post">
             Manufacturer:<select name="manufact">
                 <?php
                         $manu=$db->query("select * from manufacturetabl");
@@ -66,7 +66,11 @@
                 ?>
             </select><br>
             <button name="delBtn">Delete</button>
-        </form>
+        </form> -->
+
+        <?php
+            include("trigger.php");
+        ?>
     </section>
 
     <!-- <section>
@@ -83,18 +87,18 @@
            
             <?php
             
-                $product=$db->query("select * from view_products");
-                $count=1;
-                while(list($_id,$_prName,$_price,$_manuName,$_cont)=$product->fetch_row()){
-                    echo "<tr>
-                                <td>$count</td>
-                                <td>$_prName</td>
-                                <td>$_price</td>
-                                <td>$_manuName</td>
-                                <td>$_cont</td>
-                    </tr>";
-                    $count++;
-                }
+                // $product=$db->query("select * from view_products");
+                // $count=1;
+                // while(list($_id,$_prName,$_price,$_manuName,$_cont)=$product->fetch_row()){
+                //     echo "<tr>
+                //                 <td>$count</td>
+                //                 <td>$_prName</td>
+                //                 <td>$_price</td>
+                //                 <td>$_manuName</td>
+                //                 <td>$_cont</td>
+                //     </tr>";
+                //     $count++;
+                // }
             ?>
 
 
