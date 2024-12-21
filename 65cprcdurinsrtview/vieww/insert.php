@@ -1,6 +1,6 @@
 <?php
     // Database connection
-    $dbcon = new mysqli('localhost', 'root', '', 'newbrandtab');
+    $dbcon = new mysqli('localhost', 'root', '', 'newbrandtab_add');
     
     // This code inserts data into the database
     if (isset($_POST['btn'])) {
