@@ -16,6 +16,12 @@
             $db->query("call add_prod('$productName','$price','$manuName')");
             
         }
+
+        //trigger section
+        if(isset($_POST["delBtn"])){
+            $mid=$_POST["manufact"];
+            $db->query("delete from manufacturetabl where id='$mid' ");
+        }
 ?>
 
 <!DOCTYPE html>
@@ -49,6 +55,50 @@
             </select><br><br>
             <button name="addPro">Add product</button>
         </form>
+        <!-- after trigger -->
+        <form action="" method="post">
+            Manufacturer:<select name="manufact">
+                <?php
+                        $manu=$db->query("select * from manufacturetabl");
+                        while(list($_mid,$_mname)=$manu->fetch_row()){
+                            echo "<option value='$_mid'>$_mname</option>";
+                        }
+                ?>
+            </select><br>
+            <button name="delBtn">Delete</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>this this view product details table</h2>
+        <table border="1">
+            <tr>
+                <td>Serial</td>
+                <td>Product Name</td>
+                <td>Price</td>
+                <td>Manufacture Name</td>
+                <td>Contact</td>
+            </tr>
+            
+           
+            <?php
+            
+                $product=$db->query("select * from view_products");
+                $count=1;
+                while(list($_id,$_prName,$_price,$_manuName,$_cont)=$product->fetch_row()){
+                    echo "<tr>
+                                <td>$count</td>
+                                <td>$_prName</td>
+                                <td>$_price</td>
+                                <td>$_manuName</td>
+                                <td>$_cont</td>
+                    </tr>";
+                    $count++;
+                }
+            ?>
+
+
+        </table>
     </section>
     
 
