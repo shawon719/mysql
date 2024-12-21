@@ -1,5 +1,5 @@
 <?php 
-$db = new mysqli('localhost','root','','company');
+$db = new mysqli('localhost','root','','com_pany');
 
 if(isset($_POST['btnSubmit'])){
 	$mname = $_POST['mname'];
@@ -100,9 +100,9 @@ if(isset($_POST['delmanufact'])){
 <table border="1" style="border-collapse: collapse;" > 
 	<tr>
 		<th>ID</th>
-		<th>Name</th>
+		<th>Product Name</th>
 		<th>Price</th>
-		<th>Manufacturer</th>
+		<th>Manufacturer Name</th>
 		<th>Contact</th>
 	</tr>
 	<?php 
