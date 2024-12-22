@@ -34,7 +34,7 @@
 $conn = mysqli_connect('localhost','root','','shop');
 if ($_GET['id']){ 
     $getid = $_GET['id'];
-   $sql = "SELECT * FROM shop_emp WHERE id=$getid";
+   $sql = "SELECT * FROM shop_details WHERE id=$getid";
    $query = mysqli_query($conn, $sql);
    $data = mysqli_fetch_assoc($query);
    $id = $data['id'];
