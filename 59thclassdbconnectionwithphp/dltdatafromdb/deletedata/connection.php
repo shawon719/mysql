@@ -6,6 +6,7 @@
             $sql="DELETE FROM friend WHERE id = $delete_id";
                     if(mysqli_query($db,$sql)==TRUE){
                         header("location:indexx.php");
+                        exit();
                     } 
         }
 ?>

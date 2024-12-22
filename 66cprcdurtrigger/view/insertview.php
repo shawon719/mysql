@@ -1,6 +1,6 @@
 <?php
 // Database connection
-$db = new mysqli("localhost", "root", "", "brandnn");
+$db = new mysqli("localhost", "root", "", "brandn");
 
 // Binding brand table properties with server using POST variable.
 if (isset($_POST["brbtn"])) {

@@ -6,7 +6,7 @@
     //     echo "connect successfully";
     // }
 try{
-     $db= mysqli_connect('localhost','root','','student_info');
+     $db= mysqli_connect('localhost','root','','student_infoo');
          if(!$db){
         throw new Exception("connection failed.");
     }else{
