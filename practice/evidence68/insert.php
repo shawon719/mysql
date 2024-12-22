@@ -1,5 +1,5 @@
 <?php
-         $db=mysqli_connect("localhost","root","","com");
+         $db=mysqli_connect("localhost","root","","company");
 
         if(isset($_POST["maSub"])){
             $mname=$_POST["maName"];
@@ -90,6 +90,7 @@
                                         <td>$_id</td>
                                         <td>$_pname</td>
                                         <td>$_pprice</td>
+                                        
                                         <td>$_address</td>
                                         <td>$_contact</td>
                             </tr>";
