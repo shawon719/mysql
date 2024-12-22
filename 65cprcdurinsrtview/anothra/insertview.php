@@ -1,16 +1,16 @@
 <?php
-$db = mysqli_connect("localhost","root","","products_data");
+$db = mysqli_connect("localhost","root","","brandproductdb");
 if(isset($_POST["btnSubmit"])){
     $name = $_POST['name'];
     $contact = $_POST['contact'];
-    $db->query("call brand_insert('$name','$contact')");
+    $db->query("call br('$name','$contact')");
 }
 if(isset($_POST["btnProduct"])){
     $name = $_POST['bname'];
     $price = $_POST['bprice'];
     $nanuf = $_POST['manuf'];
     // $id = $_POST['manufac'];
-    $db->query("call add_product('$name','$price','$nanuf')");
+    $db->query("call pro('$name','$price','$nanuf')");
 }
 ?>
 

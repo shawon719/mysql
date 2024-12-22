@@ -14,6 +14,11 @@
             $db->query("call proadd('$pname','$price','$bid')");
         }
 
+        if(isset($_POST["del"])){
+            $bid=$_POST["delbrand"];
+            $db->query("delete from brand where id='$bid' ");
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -46,12 +51,24 @@
                             echo "<option value='$_bid'>$_bname</option>";
                         }
                 ?>
-            </select><br><br>
+            </select>
 
             <button name="addProduct">ADD</button>
         </form>
+
+        <form action="" method="post">
+            Brand:<select name="delbrand">
+                <?php
+                        $brand=$db->query("select * from brand");
+                        while(list($_bid,$_bname)=$brand->fetch_row()){
+                            echo "<option value='$_bid'>$_bname</option>";
+                        }
+                ?>
+            </select>
+            <button name="del">delete</button>
+        </form>
      </section>
-     <!-- this is view table -->
+        <!-- this is view table -->
       <section>
         <h1>this is view table</h1>
         <table border="1" style="border-collapse:collapse">
@@ -64,8 +81,33 @@
                         </tr>
 
                   <?php
-                            <tr></tr>
+                            // $product=$db->query("select * from  product_view");
+                            // while(list($_id,$_pname,$_pprice,$_brname,$_contact)=$product->fetch_row()){
+                            //     echo "<tr>
+                            //                 <td>$_id</td>
+                            //                 <td>$_pname</td>
+                            //                 <td>$_pprice</td>
+                            //                 <td>$_brname</td>
+                            //                 <td>$_contact</td>
+                                
+                            //     </tr>";
+                            // }
                   ?>
+                  <?php
+            
+                        $product=$db->query("select * from product_view");
+                        $count=1;
+                        while(list($_id,$_prName,$_price,$_brandName,$_cont)=$product->fetch_row()){
+                            echo "<tr>
+                                        <td>$count</td>
+                                        <td>$_prName</td>
+                                        <td>$_price</td>
+                                        <td>$_brandName</td>
+                                        <td>$_cont</td>
+                            </tr>";
+                            $count++;
+                        }
+                ?>
         </table>
       </section>
 </body>

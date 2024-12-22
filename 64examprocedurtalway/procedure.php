@@ -1,6 +1,6 @@
 <?php
     //database connection
-    $dbcon=new mysqli('localhost','root','','industry');
+    $dbcon=new mysqli('localhost','root','','industry_64');
     
     //this code insert data to database
     if(isset($_POST['btn'])){
@@ -11,12 +11,12 @@
     }//end of inserting formula
 
     //this code will show 
-    // if(isset($_POST['addproduct'])){
-    //     $pname=$_POST['pnam'];
-    //     $pprice=$_POST['pp'];
-    //     $mid=$_POST['product'];
-    //     $dbcon->query("call product_t('$pname','$pprice','$mid')");
-    // }
+    if(isset($_POST['addproduct'])){
+        $pname=$_POST['pnam'];
+        $pprice=$_POST['pp'];
+        $mid=$_POST['product'];
+        $dbcon->query("call product_t('$pname','$pprice','$mid')");
+    }
 
 ?>
 <!DOCTYPE html>
