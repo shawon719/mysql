@@ -10,6 +10,7 @@
         if(isset($_POST["addProduct"])){
             $pname=$_POST["prname"];
             $price=$_POST["pp"];
+            
             $bid=$_POST["branddd"];
             $db->query("call proadd('$pname','$price','$bid')");
         }
@@ -44,6 +45,7 @@
         <form action="" method="post">
             Product Name:<input type="text" name="prname"><br><br>
             Price:<input type="text" name="pp"><br><br>
+            <!-- Brand Name:<input type="text" name="brname"><br><br> -->
             Brand Name:<select name="branddd" >
                 <?php
                         $brand=$db->query("select * from brand");
@@ -53,7 +55,8 @@
                 ?>
             </select>
 
-            <button name="addProduct">ADD</button>
+            <button name="addProduct">ADD</button><br><br>
+           
         </form>
 
         <form action="" method="post">
