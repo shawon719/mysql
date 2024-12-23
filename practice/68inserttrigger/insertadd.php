@@ -112,6 +112,32 @@
                         }
                 ?>
         </table>
+      </section><br><br>
+      <section>
+        <table border="1" style="border-collapse:collapse">
+                        <tr>
+                            <td>Serial</td>
+                            <td>Product Name</td>
+                            <td>Product Price</td>
+                            <td>Brand Name</td>
+                            <td>Contact</td>
+                        </tr>
+                        <?php
+                            $product=$db->query("select * from conditional_tab");
+                                $count=1;
+                                while(list($_id,$_prName,$_price,$_brandName,$_cont)=$product->fetch_row()){
+                                   $_id=$count;
+                                    echo "<tr>
+                                                <td>$_id</td>
+                                                <td>$_prName</td>
+                                                <td>$_price</td>
+                                                <td>$_brandName</td>
+                                                <td>$_cont</td>
+                                    </tr>";
+                                    $count++;
+                                }
+                        ?>
+        </table>
       </section>
 </body>
 </html>
